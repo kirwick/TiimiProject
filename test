@@ -1,13 +1,2 @@
-body {
-  background-color: lightblue;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-
-p {
-  font-family: calibri;
-  font-size: 20px;
-}
+h1 { color:red; background-color:yellow; font-family:'ComicSans MS'; }
+p { color:blue; background-color:orange; font-family:Arial; }
