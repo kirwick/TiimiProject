@@ -1,2 +1,16 @@
-h1 { color:red; background-color:yellow; font-family:'ComicSans MS'; }
-p { color:blue; background-color:orange; font-family:Arial; }
+/* myStyle.css */
+body {
+ background-color: #333300;
+ color: #FFFFFF;
+}
+h1 {
+ color: #FFFF33;
+ text-align: center;
+ font: italic 200% fantasy;
+}
+p {
+ background-color: #FFFF33;
+ color: #333300;
+ text-align: right;
+ border: 3px groove #FFFF33;
+}
