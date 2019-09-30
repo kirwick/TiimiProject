@@ -2,6 +2,7 @@
 body {
     background-color: #a1cae8;
     color: #ffffff;
+    text-align: center;
 }
 
 h1 {
@@ -13,7 +14,7 @@ h1 {
 p {
     background-color: #7d92be;
     color: #ffffff;
-    font: menu 150%;  
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     border: 2px groove #ffffff;
 }
