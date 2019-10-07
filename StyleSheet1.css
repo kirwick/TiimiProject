@@ -74,7 +74,7 @@ tr:nth-child(even) {
     width: 33.33%;
 }
 
-TopNav a:hover{
+.TopNav a:hover{
     background-color: #000000;
     color: black;
 }
@@ -85,6 +85,27 @@ TopNav a:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#Topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#Topnav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+}
+
+#TopNav a:hover {
+    background-color: #000000;
+    color: black;
 }
 
 .content{
