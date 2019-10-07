@@ -56,8 +56,10 @@ tr:nth-child(even) {
 }
 
 .TopNav {
-    position: relative;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
     background-color: #333;
 }
 
@@ -67,12 +69,14 @@ tr:nth-child(even) {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    width: 33.33%;
 }
 
 TopNav a:hover{
     background-color: #000000;
-    color: white;
+    color: black;
 }
 
 .TopNav-Centered a{
