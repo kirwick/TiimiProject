@@ -59,7 +59,7 @@ tr:nth-child(even) {
     position: fixed;
     top: 0;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: #333;
 }
 
@@ -87,23 +87,19 @@ TopNav a:hover{
     transform: translate(-50%, -50%);
 }
 
-/*.MenuList {
-    
+.content{
+    padding: 16px;
 }
 
-.MenuList a {
-  float: none;
-  position: absolute;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}s
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-.MenuList a:hover {
-  background-color: #111111;
-}*/
+.sticky + .content{
+    padding-top: 200px;
+}
 
 .BasicList {
     color: #ffd800;

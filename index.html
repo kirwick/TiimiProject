@@ -1,4 +1,20 @@
 <title>MashWashine</title>
+<script>
+window.onscroll = function () { myFunction() };
+
+var navbar = document.getElementById("TopNav");
+
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        nabar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}</script>
+
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
