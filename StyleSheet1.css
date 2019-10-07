@@ -55,21 +55,51 @@ tr:nth-child(even) {
     background-color: #4cff00;
 }
 
-.MenuList {
+.TopNav {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.TopNav a{
     float: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+TopNav a:hover{
+    background-color: #000000;
+    color: white;
+}
+
+.TopNav-Centered a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.MenuList {
+    
 }
 
 .MenuList a {
+  float: none;
+  position: absolute;
   display: block;
   color: white;
   text-align: center;
   padding: 16px;
   text-decoration: none;
-}
+}s
 
 .MenuList a:hover {
   background-color: #111111;
-}
+}*/
 
 .BasicList {
     color: #ffd800;
