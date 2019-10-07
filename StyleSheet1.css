@@ -1,6 +1,6 @@
 ﻿/* test2.css */
 body {
-    background-color: #ff0000;
+    background-color: #a1cae8;
     color: #ffffff;
     text-align: center;
 }
@@ -55,11 +55,11 @@ tr:nth-child(even) {
     background-color: #4cff00;
 }
 
-li {
+.MenuList {
     float: left;
 }
 
-li a {
+.MenuList a {
   display: block;
   color: white;
   text-align: center;
@@ -67,6 +67,10 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.MenuList a:hover {
   background-color: #111111;
+}
+
+.BasicList {
+    color: #ffd800;
 }
