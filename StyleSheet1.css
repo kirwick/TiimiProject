@@ -56,7 +56,7 @@ tr:nth-child(even) {
 }
 
 .MenuList {
-    float: left;
+    float: inherit;
 }
 
 .MenuList a {
