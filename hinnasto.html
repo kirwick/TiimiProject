@@ -9,38 +9,74 @@
     <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
     <div id="navbar">
         <div class="navbar-centred">
-            <a href="https://kirwick.github.io/TiimiProject/">HOME</a>
-            <a href="https://kirwick.github.io/TiimiProject/contact">CONTACT</a>
-            <a href="https://kirwick.github.io/TiimiProject/about">ABOUT</a>
+            <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+            <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+            <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
         </div>
     </div><br>
 
-    <div>
-        <img src="washing_machine.jpg" alt="Washing Machine" width="1100" height="733" align="middle">
-    </div>
 
-
+    <h2>HINNASTO</h2>
+    <table>
+        <tr>
+            <th>Palvelu</th>
+            <th>Hinta (Pesukoneen koko: Pieni, Keskikokoinen, Iso)</th>
+        </tr>
+        <tr>
+            <td>Vesipesu</td>
+            <td>10, 15, 20 $</td>
+        </tr>
+        <tr>
+            <td>Emulsiopesu</td>
+            <td>20, 30, 45 $</td>
+        </tr>
+        <tr>
+            <td>Kuivapesu</td>
+            <td>25, 35, 50 $</td>
+        </tr>
+        <tr>
+            <td>Otsonointi</td>
+            <td>30, 45, 55 $</td>
+        </tr>
+        <tr>
+            <td>Liinavaatteet</td>
+            <td>30, 35, 40 $</td>
+        </tr>
+        <tr>
+            <td>Matot</td>
+            <td>18, 25, 35 $</td>
+        </tr>
+        <tr>
+            <td>Vahinkopyykki</td>
+            <td>5, 15, 60 $</td>
+        </tr>
+    </table>
     <hr>
 
     <div class="footer">
         <p>Footer</p>
+        <div class="navbar-centred">
+            <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+            <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+            <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
+        </div>
     </div>
 
 
     <script>
-window.onscroll = function () {myFunction()};
+        window.onscroll = function () { myFunction() };
 
-var navbar = document.getElementById("navbar");
+        var navbar = document.getElementById("navbar");
 
-var sticky = navbar.offsetTop;
+        var sticky = navbar.offsetTop;
 
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
-}</script>
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }</script>
 
 </body>
 </html>
