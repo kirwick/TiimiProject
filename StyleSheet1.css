@@ -113,7 +113,6 @@ tr:nth-child(even) {
 
 #childWrapper {
     list-style: none;
-    text-align: center;
     width: 450px;
     height: 90px;
     margin: 0;
