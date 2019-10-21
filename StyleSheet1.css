@@ -88,10 +88,7 @@ tr:nth-child(even) {
 }
 
 #navbar {
-    width: 300px;
-    height: 90px;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: #333;
 }
 
@@ -109,26 +106,6 @@ tr:nth-child(even) {
 #navbar a:hover {
     background-color: #000000;
     color: black;
-}
-
-#childWrapper {
-    list-style: none;
-    width: 450px;
-    height: 90px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#childWrapper > li {
-    float: left;
-    width: 150px;
-    height: 90px;
-    background-color: red;
-}
-
-#childWrapper > li:nth-child(even) {
-    background-color: blue;
 }
 
 .content{
