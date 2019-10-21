@@ -121,7 +121,7 @@ tr:nth-child(even) {
 }
 
 #childWrapper > li {
-    float: left;
+    float: unset;
     width: 150px;
     height: 90px;
     background-color: red;
