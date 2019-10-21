@@ -7,7 +7,7 @@
 
 <body>
     <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
-    <div id="TopNav">
+    <div id="navbar">
         <div class="TopNav-Centred">
             <a href="javascript:void(0)">HOME</a>
             <a href="javascript:void(0)">CONTACT</a>
@@ -67,15 +67,15 @@
     <hr>
 
 <script>
-window.onscroll = function () { myFunction() };
+window.onscroll = function () {myFunction()};
 
-var navbar = document.getElementById("TopNav");
+var navbar = document.getElementById("navbar");
 
 var sticky = navbar.offsetTop;
 
 function myFunction() {
     if (window.pageYOffset >= sticky) {
-        nabar.classList.add("sticky")
+        navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
     }

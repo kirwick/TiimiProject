@@ -87,12 +87,12 @@ tr:nth-child(even) {
     transform: translate(-50%, -50%);
 }
 
-#Topnav {
+#navbar {
     overflow: hidden;
     background-color: #333;
 }
 
-#Topnav a{
+#navbar a{
     float: left;
     display: block;
     color: #f2f2f2;
@@ -103,7 +103,7 @@ tr:nth-child(even) {
     font-size: 24px;
 }
 
-#TopNav a:hover {
+#navbar a:hover {
     background-color: #000000;
     color: black;
 }
