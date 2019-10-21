@@ -55,7 +55,7 @@ tr:nth-child(even) {
     background-color: #4cff00;
 }
 
-.TopNav {
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -63,7 +63,7 @@ tr:nth-child(even) {
     background-color: #333;
 }
 
-.TopNav a{
+.navbar a{
     float: none;
     color: #f2f2f2;
     text-align: center;
@@ -74,12 +74,12 @@ tr:nth-child(even) {
     width: 33.33%;
 }
 
-.TopNav a:hover{
+.navbar a:hover{
     background-color: #000000;
     color: black;
 }
 
-.TopNav-Centered a{
+.navbar-centered a{
     float: none;
     position: absolute;
     top: 50%;
