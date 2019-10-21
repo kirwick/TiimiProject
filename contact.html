@@ -1,0 +1,46 @@
+﻿<title>MashWashine</title>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+</head>
+
+<body>
+    <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
+    <div id="navbar">
+        <div class="navbar-centred">
+            <a href="https://kirwick.github.io/TiimiProject/">HOME</a>
+            <a href="file:///C:/Users/mariver/Documents/GitHub/TiimiProject/contact.html">CONTACT</a>
+            <a href="javascript:void(0)">ABOUT</a>
+        </div>
+    </div><br>
+
+    <div>
+        <img src="washing_machine.jpg" alt="Washing Machine" width="1100" height="733" align="middle">
+    </div>
+
+
+    <hr>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+
+    <script>
+window.onscroll = function () {myFunction()};
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}</script>
+
+</body>
+</html>
