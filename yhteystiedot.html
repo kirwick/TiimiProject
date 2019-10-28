@@ -21,6 +21,19 @@
         <div class="column" style="background-color:#aaa;">
             <h2>Column 1</h2>
             <p>Some text..</p>
+            <h1 style="text-align: center"> QUESTIONS FORM </h1>
+            <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
+
+                <p>Name: <input type="text" size=65 name="Name"> </p><br>
+                <p>E-mail Address: <input type="text" size=65 name="EMail">  </p><br>
+                <p>Phone: <input type="text" size=65 name="Phone"> </p><br>
+
+                <p>Comments:  <textarea cols="55" name="Comment">  </textarea></p>
+                <p>
+                    <input type="submit" value="send" name="Submit">
+                    <input type="reset" value="Reset" name="Reset">
+                </p>
+            </form>
         </div>
         <div class="column" style="background-color:#bbb;">
             <h2>Column 2</h2>
@@ -52,36 +65,37 @@
             } else {
                 navbar.classList.remove("sticky");
             }
-        }</script>
+       
 
-    <script>
-        function QUESTIONS() {
-            var name = document.forms["RegForm"]["Name"];
-            var email = document.forms["RegForm"]["EMail"];
-            var phone = document.forms["RegForm"]["Phone"];
-            var what = document.forms["RegForm"]["Subject"];
+    function QUESTIONS()
+    {
+    var name = document.forms["RegForm"]["Name"];
+    var email = document.forms["RegForm"]["EMail"];
+    var phone = document.forms["RegForm"]["Telephone"];
 
-            if (name.value == "") {
-                window.alert("Please enter your name.");
-                name.focus();
-                return false;
-            }
+    if (name.value == "")
+    {
+    window.alert("Please enter your name.");
+    name.focus();
+    return false;
+    }
 
-            if (email.value == "") {
-                window.alert("Please enter a valid e-mail address.");
-                email.focus();
-                return false;
-            }
+    if (email.value == "")
+    {
+    window.alert("Please enter a valid e-mail address.");
+    email.focus();
+    return false;
+    }
 
-            if (phone.value == "") {
-                window.alert("Please enter your phone number.");
-                phone.focus();
-                return false;
-            }
+    if (phone.value == "")
+    {
+    window.alert("Please enter your phone number.");
+    phone.focus();
+    return false;
+    }
 
-
-            return true;
-        }</script>
+    return true;
+    }</script>
 
 </body>
 </html>
