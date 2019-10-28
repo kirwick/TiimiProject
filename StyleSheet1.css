@@ -149,3 +149,29 @@ tr:nth-child(even) {
     flex: 50%;
     padding: 10px;
 }
+
+QUESTIONS {
+    margin-left: 70px;
+    font-weight: bold;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+    margin-right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+}
+
+div {
+    box-sizing: border-box;
+    width: 100%;
+    border: 100px solid black;
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 600px;
+}
+}
