@@ -22,6 +22,8 @@
 
     <h2 style="font-size:30px;">Tervetuloa!</h2>
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zXKhoK2GBXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     <div class="footer">
         <p>Footer</p>
         <div class="navbar-centred">
@@ -32,20 +34,20 @@
     </div>
 
 
-<script>
-window.onscroll = function () {myFunction()};
+    <script>
+        window.onscroll = function () { myFunction() };
 
-var navbar = document.getElementById("navbar");
+        var navbar = document.getElementById("navbar");
 
-var sticky = navbar.offsetTop;
+        var sticky = navbar.offsetTop;
 
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
-}</script>
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }</script>
 
 </body>
 </html>
