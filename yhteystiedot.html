@@ -71,9 +71,23 @@
                     alert(Message);
             }
 
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+
     }</script>
 </head>
-<body onload="ShowPosition()">
+<body onload="ShowPosition()"> <!--Tämän piti olla geolokaatio, ei mitään käryä toiminnasta-->
          
              <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
              <div id="navbar">
@@ -105,8 +119,14 @@
                  </div>
                  <div class="column" style="background-color:#bbb;">
 
-                     <h2>Column 2</h2>
-                     <p>Some text..</p>
+                     <h2>Ryömikö kissasi pesukoneeseen?</h2>
+                     <p>Lähetä meille kuva!</p>
+                     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                     <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"
+                     <br />
+                     <div ondragover="permitdrop(event)" style="background-color: yellow; width:400px;
+height:300px"></div>
                  </div>
              </div>
 
