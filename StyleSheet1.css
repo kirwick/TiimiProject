@@ -161,16 +161,15 @@ QUESTIONS {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
 }
 
-div {
+/*div {
     box-sizing: border-box;
     width: 100%;
     float: left;
     align-content: center;
     align-items: center;
-}
+}*/
 
 form {
     margin: 0 auto;
     width: 600px;
-}
 }
