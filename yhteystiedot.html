@@ -44,7 +44,7 @@
                 return true;
             }
 
-            function ShowPosition() {
+            function ShowPosition() /*{ Tämän piti olla geolokaatio, ei mitään käryä toiminnasta*/
                     if (navigator.geolocation)
                         navigator.geolocation.getCurrentPosition(DisplayResult, DisplayError)
                     else
@@ -75,7 +75,7 @@
                 ev.preventDefault();
             }
 
-            function drag(ev) {
+            function drag(ev) {  /*Drag N Drop*/
                 ev.dataTransfer.setData("text", ev.target.id);
             }
 
@@ -87,7 +87,7 @@
 
     }</script>
 </head>
-<body onload="ShowPosition()"> <!--Tämän piti olla geolokaatio, ei mitään käryä toiminnasta-->
+<body onload="ShowPosition()"> <!--Geolokaatiojuttu-->
          
              <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
              <div id="navbar">
@@ -119,14 +119,14 @@
                  </div>
                  <div class="column" style="background-color:#bbb;">
 
-                     <h2>Ryömikö kissasi pesukoneeseen?</h2>
+                     <h2>Ryömikö kissasi pesukoneeseen?</h2> <!--Tarvitaan kuva, joka drägätä?-->
                      <p>Lähetä meille kuva!</p>
                      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
                      <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"
                      <br />
                      <div ondragover="permitdrop(event)" style="background-color: yellow; width:400px;
-height:300px"></div>
+                     height:300px"></div>
                  </div>
              </div>
 
