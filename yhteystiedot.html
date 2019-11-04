@@ -72,18 +72,30 @@
             alert(Message);
         }
 
-        function allowDrop(event) {
-            event.preventDefault();
-        }
+        //function allowDrop(event) {
+        //    event.preventDefault();
+        //}
 
-        function drag(event) {  
-            event.dataTransfer.setData("text", event.target.id);
-        }
+        //function drag(event) {  
+        //    event.dataTransfer.setData("text", event.target.id);
+        //}
+
+        //function drop(event) {
+        //    event.preventDefault();
+        //    var data = event.dataTransfer.getData("text");
+        //    event.target.appendChild(document.getElementById(data));
+        //}
 
         function drop(event) {
             event.preventDefault();
-            var data = event.dataTransfer.getData("text");
+            var data = event.dataTransfer.getData("Text");
             event.target.appendChild(document.getElementById(data));
+        }
+        function permitdrop(event) {
+            event.preventDefault();
+        }
+        function drag(event) {
+            event.dataTransfer.setData("Text", event.target.id);
         }
 
 
