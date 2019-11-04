@@ -45,99 +45,106 @@
             }
 
             function ShowPosition() /*{ Tämän piti olla geolokaatio, ei mitään käryä toiminnasta*/
-                    if (navigator.geolocation)
-                        navigator.geolocation.getCurrentPosition(DisplayResult, DisplayError)
-                    else
-                        alert("Browser does not support geolocation");
+            if (navigator.geolocation)
+                navigator.geolocation.getCurrentPosition(DisplayResult, DisplayError)
+            else
+                alert("Browser does not support geolocation");
+        }
+        function DisplayResult(Position) {
+            var message = " Latitude: " + Position.coords.latitude;
+            message += " Longitude: " + Position.coords.longitude;
+            message += " Accuracy: " + Position.coords.accuracy + " meters ";
+            alert(message);
+        }
+        function DisplayError(Error) {
+            var message;
+            switch (Error.code) {
+                case 0: message = "Error retrieving location information";
+                    break;
+                case 1: message = "User prevented location access";
+                    break;
+                case 2: message = "Browser could not retrieve data";
+                    break;
+                case 3: message = "Browser timed out during data retrieval";
+                    break;
             }
-            function DisplayResult(Position) {
-                    var message = " Latitude: " + Position.coords.latitude;
-                    message += " Longitude: " + Position.coords.longitude;
-                    message += " Accuracy: " + Position.coords.accuracy + " meters ";
-                    alert(message);
-            }
-            function DisplayError(Error) {
-                    var message;
-                    switch (Error.code) {
-                        case 0: message = "Error retrieving location information";
-                            break;
-                        case 1: message = "User prevented location access";
-                            break;
-                        case 2: message = "Browser could not retrieve data";
-                            break;
-                        case 3: message = "Browser timed out during data retrieval";
-                            break;
-                    }
-                    alert(Message);
-            }
+            alert(Message);
+        }
 
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
 
-            function drag(ev) {  /*Drag N Drop*/
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
+        function drag(ev) {  /*Drag N Drop*/
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
 
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                ev.target.appendChild(document.getElementById(data));
-            }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+
 
     }</script>
-</head>
-<body onload="ShowPosition()"> <!--Geolokaatiojuttu-->
-         
-             <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
-             <div id="navbar">
-                 <div class="navbar-centred">
-                     <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
-                     <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
-                     <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
-                 </div>
-             </div><br>
+    </head>
+    <body onload="ShowPosition()">
+        <!--Geolokaatiojuttu-->
 
-             <h2>Two Equal Columns</h2>
+        <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
+        <div id="navbar">
+            <div class="navbar-centred">
+                <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+                <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+                <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
+            </div>
+        </div><br>
 
-             <div class="row">
-                 <div class="column" style="background-color:#aaa;">
-                     <h2>Kymyksyksiä</h2>
-                     <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
-                     <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
+        <h2>Two Equal Columns</h2>
 
-                         <p>Nimi: <input type="text" size=65 name="Name"> </p><br>
-                         <p>E-mail: <input type="text" size=65 name="EMail">  </p><br>
-                         <p>Puhelinnumero: <input type="text" size=65 name="Phone"> </p><br>
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Kymyksyksiä</h2>
+                <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
+                <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
 
-                         <p>Kirjoita kysymyksesi/palautteesi:  <textarea cols="55" name="Comment">  </textarea></p>
-                         <p>
-                             <input type="submit" value="send" name="Lähetä">
-                             <input type="reset" value="Reset" name="Tyhjennä">
-                         </p>
-                     </form>
-                 </div>
-                 <div class="column" style="background-color:#bbb;">
+                    <p>Nimi: <input type="text" size=65 name="Name"> </p><br>
+                    <p>E-mail: <input type="text" size=65 name="EMail">  </p><br>
+                    <p>Puhelinnumero: <input type="text" size=65 name="Phone"> </p><br>
 
-                     <h2>Ryömikö kissasi pesukoneeseen?</h2> <!--Tarvitaan kuva, joka drägätä?-->
-                     <p>Lähetä meille kuva!</p>
-                     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <p>Kirjoita kysymyksesi/palautteesi:  <textarea cols="55" name="Comment">  </textarea></p>
+                    <p>
+                        <input type="submit" value="send" name="Lähetä">
+                        <input type="reset" value="Reset" name="Tyhjennä">
+                    </p>
+                </form>
+            </div>
+            <div class="column" style="background-color:#bbb;">
 
-                     <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"
-                     <br />
-                     <div ondragover="permitdrop(event)" style="background-color: floralwhite; width:400px;
+                <h2>Ryömikö kissasi pesukoneeseen?</h2> <!--Tarvitaan kuva, joka drägätä?-->
+                <p>Lähetä meille kuva!</p>
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"
+                <br />
+                <div ondragover="permitdrop(event)" style="background-color: floralwhite; width:400px;
                      height:300px"></div>
-                 </div>
-             </div>
+            </div>
+        </div>
 
+        <imgsrc ="bubblecat" draggable="true" id="bubbles" width="100" height="250" ondragstart="" drag(event)" />
 
-             <div class="footer">
-                 <p>Footer</p>
-                 <div class="navbar-centred">
-                     <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
-                     <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
-                     <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
-                 </div>
-             </div>
-         </body>
+        <div class="footer">
+            <p>Footer</p>
+            <div class="navbar-centred">
+                <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+                <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+                <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
+            </div>
+        </div>
+    </body>
 </html>
