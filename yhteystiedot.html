@@ -101,61 +101,62 @@
 
     }</script>
     </head>
-    <body onload="ShowPosition()">
-        <!--Geolokaatiojuttu-->
+<body onload="ShowPosition()">
+    <!--Geolokaatiojuttu-->
 
-        <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
-        <div id="navbar">
-            <div class="navbar-centred">
-                <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
-                <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
-                <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
-            </div>
-        </div><br>
 
-        <h2>Two Equal Columns</h2>
-
-        <div class="row">
-            <div class="column" style="background-color:#aaa;">
-                <h2>Kymyksyksiä</h2>
-                <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
-                <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
-
-                    <p>Nimi: <input type="text" size=65 name="Name"> </p><br>
-                    <p>E-mail: <input type="text" size=65 name="EMail">  </p><br>
-                    <p>Puhelinnumero: <input type="text" size=65 name="Phone"> </p><br>
-
-                    <p>Kirjoita kysymyksesi/palautteesi:  <textarea cols="55" name="Comment">  </textarea></p>
-                    <p>
-                        <input type="submit" value="send" name="Lähetä">
-                        <input type="reset" value="Reset" name="Tyhjennä">
-                    </p>
-                </form>
-            </div>
-            <div class="column" style="background-color:#bbb;">
-
-                <h2>Näetkö kissan?</h2>
-                <p>Laita kissa laatikkoon!</p>
-                <!--<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <br>
-                <img id="bubbles" src="kuplakisu.jpg" draggable="true" ondragstart="drag(event)" width="195" height="250">-->
-                <img src="kuplakisu.jpg" draggable="true" id="bubbles" width="195" height="250" ondragstart="drag(event)"/>
-                   
-                <br/>
-                <div ondragover="permitdrop(event)" ondrop="drop(event)" style="background-color: floralwhite;
-                width:205px; height:260px"></div>
-
-            </div>
+    <h1 style="font-size:60px;">Welcome to MashWashine!</h1><br>
+    <div id="navbar">
+        <div class="navbar-centred">
+            <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+            <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+            <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
         </div>
+    </div><br>
 
+    <h2>Two Equal Columns</h2>
 
-        <div class="footer">
-            <p>Footer</p>
-            <div class="navbar-centred">
-                <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
-                <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
-                <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
-            </div>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <h2>Kymyksyksiä</h2>
+            <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
+            <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
+
+                <p>Nimi: <input type="text" size=65 name="Name"> </p><br>
+                <p>E-mail: <input type="text" size=65 name="EMail">  </p><br>
+                <p>Puhelinnumero: <input type="text" size=65 name="Phone"> </p><br>
+
+                <p>Kirjoita kysymyksesi/palautteesi:  <textarea cols="55" name="Comment">  </textarea></p>
+                <p>
+                    <input type="submit" value="send" name="Lähetä">
+                    <input type="reset" value="Reset" name="Tyhjennä">
+                </p>
+            </form>
         </div>
-    </body>
+        <div class="column" style="background-color:#bbb;">
+
+            <h2>Näetkö kissan?</h2>
+            <p>Laita kissa laatikkoon!</p>
+            <!--<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br>
+            <img id="bubbles" src="kuplakisu.jpg" draggable="true" ondragstart="drag(event)" width="195" height="250">-->
+
+            <img src="kuplakisu.jpg" draggable="true" id="bubbles" width="195" height="250" ondragstart="drag(event)" />
+            <br />
+            <div ondragover="permitdrop(event)" ondrop="drop(event)" style="background-color: floralwhite;
+                width:205px; height:260px"></div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>Footer</p>
+        <div class="navbar-centred">
+            <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+            <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+            <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
+        </div>
+    </div>
+</body>
 </html>
