@@ -25,13 +25,13 @@
         {
             var geocoder;
             geocoder = new google.maps.Geocoder();
-            varmapOptions = {
+            var mapOptions = {
                 zoom: 8,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             streetViewControl: true
             }
             map = new google.maps.Map(document.getElementById("mapLocation"), mapOptions);
-            varaddress = "1600 Pennsylvania Blvd, Washington, D.C.";
+            var address = "1600 Pennsylvania Blvd, Washington, D.C.";
             geocoder.geocode({ 'address': address }, ResultsCallBack);
         }
 
@@ -39,7 +39,7 @@
             if (status == google.maps.GeocoderStatus.OK)
             {
                 map.setCenter(results[0].geometry.location);
-                varmarker = new google.maps.Marker({
+                var marker = new google.maps.Marker({
                     map: map, position: results[0].geometry.location
                 });
             } 
@@ -143,10 +143,9 @@
     </div><br>
 
     <h2>Two Equal Columns</h2>
-
+    <div id="mapLocation" style="width: 640px; height: 480px;"></div>
     <div class="row">
         <div class="column" style="background-color:#aaa;">
-            <div id="mapLocation" style="width: 640px; height: 480px;"></div>
             <h2>Kymyksyksiä</h2>
             <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
             <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
