@@ -3,6 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
         window.onscroll = function () { myFunction() };
 
@@ -18,32 +19,59 @@
             }
         }
 
+        var map;
 
-            function QUESTIONS() {
-                var name = document.forms["RegForm"]["Name"];
-                var email = document.forms["RegForm"]["EMail"];
-                var phone = document.forms["RegForm"]["Telephone"];
-
-                if (name.value == "") {
-                    window.alert("Please enter your name.");
-                    name.focus();
-                    return false;
-                }
-
-                if (email.value == "") {
-                    window.alert("Please enter a valid e-mail address.");
-                    email.focus();
-                    return false;
-                }
-
-                if (phone.value == "") {
-                    window.alert("Please enter your phone number.");
-                    phone.focus();
-                    return false;
-                }
-
-                return true;
+        function DisplayMap()
+        {
+            vargeocoder;
+            geocoder = new google.maps.Geocoder();
+            varmapOptions = {
+                zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            streetViewControl: true
             }
+            map = new google.maps.Map(document.getElementById("mapLocation"), mapOptions);
+            varaddress = "1600 Pennsylvania Blvd, Washington, D.C.";
+            geocoder.geocode({ 'address': address }, ResultsCallBack);
+        }
+
+        function ResultsCallBack(results, status) {
+            if (status == google.maps.GeocoderStatus.OK)
+            {
+                map.setCenter(results[0].geometry.location);
+                varmarker = new google.maps.Marker({
+                    map: map, position: results[0].geometry.location
+                });
+            } 
+            else
+                alert("Geocode was not successful: " + status);
+        }
+
+        function QUESTIONS() {
+            var name = document.forms["RegForm"]["Name"];
+            var email = document.forms["RegForm"]["EMail"];
+            var phone = document.forms["RegForm"]["Telephone"];
+
+            if (name.value == "") {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+
+            if (email.value == "") {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (phone.value == "") {
+                window.alert("Please enter your phone number.");
+                phone.focus();
+                return false;
+            }
+
+            return true;
+        }
 
         function ShowPosition() { /* Tämän piti olla geolokaatio, ei mitään käryä toiminnasta*/
             if (navigator.geolocation)
@@ -76,7 +104,7 @@
         //    event.preventDefault();
         //}
 
-        //function drag(event) {  
+        //function drag(event) {
         //    event.dataTransfer.setData("text", event.target.id);
         //}
 
@@ -99,9 +127,9 @@
         }
 
 
-    }</script>
-    </head>
-<body onload="ShowPosition()">
+        }</script>
+</head>
+<body onload="DisplayMap()">
     <!--Geolokaatiojuttu-->
 
 
@@ -118,6 +146,7 @@
 
     <div class="row">
         <div class="column" style="background-color:#aaa;">
+            <div id="mapLocation" style="width: 640px; height: 480px;"></div>
             <h2>Kymyksyksiä</h2>
             <h1 style="text-align: center">Onko sinulla kysymyksiä tai palautetta?</h1>
             <form name="RegForm" action="/submit.php" onsubmit="return QUESTIONS()" method="post">
@@ -142,7 +171,7 @@
             <img id="bubbles" src="kuplakisu.jpg" draggable="true" ondragstart="drag(event)" width="195" height="250">-->
 
             <img src="kuplakisu.jpg" draggable="true" id="bubbles" width="195" height="250" ondragstart="drag(event)" />
-            <br />
+            <br>
             <div ondragover="permitdrop(event)" ondrop="drop(event)" style="background-color: floralwhite;
                 width:205px; height:260px"></div>
 
