@@ -51,35 +51,48 @@
             <td>5, 15, 60 $</td>
         </tr>
     </table>
-    <hr>
-
-    <div class="footer">
-        <p>Footer</p>
-        <div class="navbar-centred">
-            <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
-            <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
-            <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
-            <br><br>
-            <img src="FBIcon.jpg" alt="Facebook Logo">
-            <b>Tykkää meistä Facebookissa!</b>
+    <br />
+    <br />
+    <br />
+    <div class="column">
+        <p>
+            <br />
+            Opiskelijan elämässä tulee välillä vastaan tilanteita, joita ei toivoisi kenellekään.<br>
+            Ketunpolun Pesulassa valmistautuneet moniin opinnoissa vastaan tuleviin<br>
+            vastoinkäymisiin ja haluamme auttaa parhaamme mukaan.<br><br>
+            Vahinkopyykillä tarkoitamme tekstiilejä, jotka ovat altistuneet<br>
+            esimerkiksi vesivahingolle, savuhaitalle, viinille, oluelle, hielle tai verelle.<br />
+            Meillä ketunpolun Pesulassa on oikeat ja tehokkaat pesumenetelmät opiskelijapyykin puhdistukseen.<br>
+            <br />
+        </p>
         </div>
-    </div>
+
+        <div class="footer">
+            <div class="navbar-centred">
+                <a href="https://kirwick.github.io/TiimiProject/">ETUSIVU</a>
+                <a href="https://kirwick.github.io/TiimiProject/hinnasto">HINNASTO</a>
+                <a href="https://kirwick.github.io/TiimiProject/yhteystiedot">YHTEYSTIEDOT</a>
+                <br><br>
+                <img src="FBIcon.jpg" alt="Facebook Logo">
+                <b>Tykkää meistä Facebookissa!</b>
+            </div>
+        </div>
 
 
-    <script>
-        window.onscroll = function () { myFunction() };
+        <script>
+            window.onscroll = function () { myFunction() };
 
-        var navbar = document.getElementById("navbar");
+            var navbar = document.getElementById("navbar");
 
-        var sticky = navbar.offsetTop;
+            var sticky = navbar.offsetTop;
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }</script>
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }</script>
 
 </body>
 </html>
